@@ -1,12 +1,7 @@
 import { createBrowserRouter } from "react-router";
-import { Homepage } from "./pages/Homepage";
-import { Layout } from "./layouts/Layout";
-import NotFound from "./components/NotFound";
-import { Productpage } from "./pages/Productpage";
-import { AdminPage } from "./pages/Adminpage";
-import { Cartpage } from "./pages/Cartpage";
-import { Successpage } from "./pages/Successpage";
-import { Authpage } from "./pages/Authpage";
+import { NotFound } from './components';
+import Homepage from "./pages/Homepage/Homepage";
+import Layout from "./layouts/Layout";
 
 export const router = createBrowserRouter([
     {
@@ -18,26 +13,10 @@ export const router = createBrowserRouter([
                 path: "/",
                 element: <Homepage />
             },
-            {
-                path: "/productpage",
-                element: <Productpage />
-            },
-            {
-                path: "/admin",
-                element: <AdminPage />
-            },
-            {
-                path: "/cart",
-                element: <Cartpage />
-            },
-            {
-                path: "/success",
-                element: <Successpage />
-            },
-            {
-                path: "/auth",
-                element: <Authpage />
-            },
+            // {
+            //     path: "/productpage",
+            //     element: <Productpage />
+            // },
         ],
     },
 ]);
