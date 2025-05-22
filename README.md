@@ -1,41 +1,64 @@
-# Whiteout survival Alliance homepage
-If you've stumbled upon this random side-project, why are you still here?
-If you still decide to look at it then I wish you the best of luck!
-A friend of mine and myself decided to make this website while we're still learning various development languages so I can't guarantee the most readable layout.
+# 🖥️ RFA Frontend
 
+This is the frontend for the **RFA (React + Vite + TypeScript)** application. It is a modern web application built with React 18, Vite 6, and TypeScript, featuring routing and API integration.
 
-# Are you an invited developer?
-You'll find a tutorial below on how to properly set-up your project so you're connected to everything required for this project, assuming you're using VSC.
+---
 
-> 1. Press the search field at the top and write ">Git: Clone", Press enter for "Clone from Github".
-> 2. You'll need both of the following projects. (repeat > 1. until you've cloned both projects)
-  2.a https://github.com/frodrikandersson/rfa-frontend
-  2.b https://github.com/frodrikandersson/rfa-backend
+## 🔧 Tech Stack
 
-Congratulations, you've successfully cloned both projects. Now open up the projects in any way you like. I prefer to see both projects in one workspace.
+- **React 18**
+- **Vite 6**
+- **TypeScript**
+- **React Router v7**
+- **Axios** (for API requests)
+- **ESLint** (for linting)
+- **MD5** (for simple hashing)
 
-# How to setup the backend
-In order to partake in the database the docker is pointed towards you'll need a login URL provided by the original creator of this project, that would be exoquil. Send a message to me and I'll answer it eventually, hopefully, unless I'm dead.
+---
 
-  Follow the next steps if you wish to connect to docker
-> 1. Message exoquil on github to get your own connection url
-> 2. Create a file in the root folder (same folder as the docker-compose.yml file) and name it .env
-> 3. Inside .env, type this: DATABASE_URL=UrlFromExoquil
-UrlFromExoquil needs to be replaced with the Url provided by me.
-> 4. Make sure you have the docker application installed and started on your PC
-> 5. Right click the folder rfa-backend and click "open in integrated terminal"
-> 6. Enter "docker compose up"
+## 🚀 Getting Started
 
-  Follow the next steps to finalize the backend setup
-> 1. Right click the folder rfa-backend and click "open in integrated terminal" (if you've already done this earlier, skip this step)
-> 2. Enter "npm install"
-> 3. Right click the folder rfa-frontend-vite and click "open in integrated terminal"
-> 4. Enter "npm install"
+### Prerequisites
 
+- **Node.js** v18+
+- **npm** v9+
 
-# Good job! Whenever you come back to the project you'll need to do this in order to start the project again.
+### Install dependencies
 
-> Enter "npm run dev" to start the backend or frontend locally.
-> If you have docker set up you can start the docker connection through docker desktop. Click on "Containers", find "rfa-backend" and press the start button.
+```bash
+npm install
+```
 
-When we push this live we'll change some localhost urls to Vercels provided url, or something else.
+## START TERMINAL
+Right click "rfa-frontend-vite" and click "open in integrated terminal"
+
+## START THE DEVELOPMENT SERVER
+npm run dev
+
+the app will start at: http://localhost:5173
+
+## PROJECT STRUCTURE
+rfa-frontend-vite/
+├── dist/                   # Production build output
+├── public/                 # Static public files
+├── src/                    # Source code
+│   ├── api/                # Axios API functions
+│   ├── assets/             # Images and static resources
+│   ├── components/         # Shared React components
+│   ├── contexts/           # React Contexts for global state
+│   ├── hooks/              # Custom React hooks
+│   ├── layouts/            # Page layout components
+│   ├── models/             # TypeScript models/interfaces
+│   ├── pages/              # Route-level components/pages
+│   ├── services/           # Business logic and services
+│   ├── App.tsx             # Root component
+│   ├── main.tsx            # App entry point
+│   ├── Router.tsx          # Route configuration
+│   └── index.css           # Global styles
+├── index.html              # HTML template
+├── vite-env.d.ts           # Vite environment types
+├── vite.config.ts          # Vite configuration
+├── tsconfig*.json          # TypeScript configuration
+├── .gitignore              # Git ignored files
+├── eslint.config.js        # ESLint configuration
+└── README.md               # You're here!
